@@ -18,7 +18,7 @@
    # how many numbers did you put in your vector? Find out using the
    # `length` function!
 
-   # Create a vector will all the numbers from 1-10 by typing `first_ten = 1:10`.
+   # Create a vector will all the numbers from 1-10 by typing `first_ten <- 1:10`.
    # This colon operator is a special function because it's so common
    # to make vectors with a series of sequential numbers.
 

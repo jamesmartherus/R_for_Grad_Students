@@ -11,12 +11,15 @@
 
   # To tell it where you want R to look for files, use the `setwd()` command.
   # Set it to the location of your Exercises/Data folder. On my computer, for
-  # example, I would type: `setwd("/users/nick/dropbox/joint_projects/poli_sci_boot_camp/Computational_methods/Exercises/Data")`
+  # example, I would type: `setwd("/users/jamesmartherus/Dropbox/R_for_Grad_Students/Data/")`
   # Set yours.
 
   # Now we're going to load the `animals.csv` dataset. If you have microsoft excel,
   # start by just openning the dataset to see what's in it.
-  # Then run `read.csv("animals.csv")`.
+  # Then we need to install and load some packages that will help us get the file into R:
+  # Run: install.packages("tidyverse")
+  # Then run: library(tidyverse)
+  # Then run `read_csv("animals.csv")`.
   # (Note: CSV stands for comma-separated values, a generic spreadsheet format.
   # R can load lots of other formats too.)
 

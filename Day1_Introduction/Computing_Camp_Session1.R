@@ -53,10 +53,17 @@ concat
 # Each object we create in R is assigned a class, or type. For example, if we make a vector of numbers,
 # and then use the class() function, we see the class is "numeric"
 class(concat)
-
 class(hello_world)
 
+# There are several common classes:
+# `character`: these are text. Also called `strings` in other programming languages
+# `numeric`: these are numbers
+# `factor`: We won't worry too much about these for now, but these are like categorical variables. 
+# `boolean`: contains values TRUE or FALSE.
+
 # one of the biggest causes of errors in r coding is not knowing the class of your objects.
+# For example, in the vector below, because we put parentheses around the numbers,
+# R treats them like text instead of numbers.
 vector1 <- c("1","2","3","4")
 class(vector1)
 

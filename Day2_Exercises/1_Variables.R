@@ -32,5 +32,5 @@
 
   # What happens if you add `my_age` and `ten`?
 
-  # To convert `ten` to a numeric type, type `ten = as.numeric(ten)`. Now check
+  # To convert `ten` to a numeric type, type `ten <- as.numeric(ten)`. Now check
   # it's class again.

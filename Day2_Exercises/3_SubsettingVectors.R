@@ -25,7 +25,7 @@
 # Exercise 2: Subsetting Vectors with Booleans
    # Now suppose you only want the big values of `my_favorite_numbers`.
    # First, let's make a vector of true/false logical vectors. Try running
-   # `big = my_favorite_numbers > 5`. If you look at `big`, do the values make
+   # `big <- my_favorite_numbers > 5`. If you look at `big`, do the values make
    # sense?
 
    # Now try using `big` to get only the values of `my_favorite_numbers` that
