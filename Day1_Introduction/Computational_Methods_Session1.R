@@ -1,6 +1,6 @@
 ################
 # Computational Methods
-# Session 1
+# Session 1: Intro to R
 ################
 
 ####### Tour of RStudio
@@ -35,10 +35,6 @@ hello_world <- "hello world"
 
 x <- 1
 y <- 2
-
-x + 1
-
-x + y
 
 z <- x + y
 
