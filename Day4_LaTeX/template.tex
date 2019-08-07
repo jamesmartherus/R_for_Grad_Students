@@ -1,0 +1,95 @@
+
+\documentclass[a4paper]{article}
+
+%% Language and font encodings
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+
+%% Sets page size and margins
+\usepackage[a4paper,top=3cm,bottom=.5in,left=1in,right=1in]{geometry}
+
+%% Useful packages
+\usepackage{amsmath}
+\usepackage{graphicx, subfigure}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+\usepackage{natbib}				% Allows for more intuitive citations
+\usepackage{fancyhdr}					% Fine control of headers
+\usepackage{sectsty}					% Change sectional headers
+\usepackage{setspace}					% Set space between lines
+\usepackage{fullpage}					% Set all page margins to 1.5
+\usepackage{lscape}				% Place part of document in landscape
+\usepackage{url}			% Use verbatim with URL line breaks
+%\usepackage{hyperref}		% Make references hyperlinks in PDF
+\usepackage{colortbl}						% Shade table cells
+\usepackage{textcomp}						% Additional text symbols
+\usepackage[margin=10pt,font=small,labelfont=bf, labelsep=endash]{caption}	% Improve caption formatting
+%\usepackage{apacite}		% apa style citations
+\usepackage[T1]{fontenc}	% Standard package for selecting font
+%\usepackage{mathptmx}						% Times Roman font
+\usepackage{mathpazo}  						% Palatino
+\newcommand{\possessivecite}[1]{\citeauthor{#1}'s (\citeyear{#1})}	% Possessive citations
+
+\begin{document}
+
+\doublespacing
+\title{Your Title
+}
+
+\author{Your Name \\ Vanderbilt University \date{}}
+
+\maketitle
+
+  
+\doublespacing
+\setstretch{2.5}
+
+%start typing here
+
+% use \section*{} if you don't want numbered sections
+\section{Your first section}
+
+Lorem ipsum dolor
+
+\subsection{Your first subsection}
+
+
+% Bulleted list. I sometimes use these for hypotheses
+\begin{itemize}
+\item[\textbf{H1}]  
+\item[\textbf{H2}] 
+\end{itemize}
+ 
+
+% Insert a figure
+%\begin{figure}
+%\centering
+  %\includegraphics[width=.7\linewidth]{figure_file.pdf}
+  %\caption{My Caption}}
+  %\label{fig:my_label}
+%\end{figure}
+
+Here's some text with a footnote\footnote{Hi!}.
+
+%You can also do "subfigures" to add multiple plots to a figure 
+%\begin{figure}[t!]
+%    \centering
+%    \subfigure[subfigure caption]{\label{fig:subfigure_label}
+%    \includegraphics[width=.45\linewidth]{subfigure_file.pdf}}
+%    \subfigure[subfigure caption]{\label{fig:subfigure_label}
+%    \includegraphics[width=.45\linewidth]{subfigure_file.pdf}}
+%   \caption{Caption for the whole figure}
+%    \label{fig:label_for_whole_figure}
+%\end{figure}
+
+
+
+
+\newpage
+\singlespacing
+\bibliographystyle{apalike}
+%\bibliography{bibliography file name}
+
+\end{document}
