@@ -16,5 +16,8 @@
 
    # can you make a new variable for animals that HAVE feathers but are
    # NOT airborne?
+animals <- mutate(animals, feathers_nofly = feathers==1 & airborne==0)
 
    # What animals fit that category?
+flightless_birds <- filter(animals, feathers_nofly==TRUE)
+

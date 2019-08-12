@@ -89,6 +89,75 @@ skrrrahh(35)
 skrrrahh(36)
 
 
+# Complete Exercise 1: Variables
+
+#########
+# Vectors
+#########
+
+# Last time we learned what variables are and played around with a few different types of variables.
+# Today we'll spend more time on variables with multiple dimensions, and eventually talk about data.frames,
+# which you'll use quite a lot in grad school.
+
+# First let's make a vector. A vector is a variable that includes multiple values. You can think about 
+# a vector as a column of a spreadsheet. 
+some_numbers <- c(1,2,3,4)
+some_numbers[1:3]
+
+be_careful <- c(1,"these",2,"are",3,"words")
+class(be_careful)
+some_numbers
+
+# Vectors always hold the same type of value. For example, you can't have a vector with some 
+# numbers and some strings. If you try, R will automatically choose a type for you:
+be_careful <- c(1,"hi",2,"there")
+class(be_careful)
+
+# There are different functions that help us learn about vectors we have created. For example, try
+# creating a vector and using the length() function to see how many values it contains.
+some_numbers <- c(1,2,3,4,5,4,3,2,1)
+length(some_numbers)
+
+
+
+# Now let's do Exercise 2: Making Vectors
+
+# Each piece of a vector has a name. We can refer to individual pieces of a vector by using brackets.
+# For example, to get the first item from a vector, I would put a 1 in brackets after the vector's name.
+some_numbers[1]
+
+# Sometimes we want to get pieces of a vector based on some sort of logical rule. To do this we use
+# Boolean logic.
+# `==` means `equal to`
+# `!=` mean `not equal to`
+# `&` means `and`
+# `|` means `or`
+# `>` means `greater than`
+# `<` means `less than`
+# `>=` means `greater than or equal to`
+# `<=` means `less than or equal to`
+# We can also use the phrases TRUE and FALSE
+
+# We can use these different logical operators to make rules to pick which pieces of a vector we want
+# to use. This will be important later, so let's practice this: Do exercise 3: Subsetting Vectors.
+
+my_vector <- c(1,2,2,3,3,3,4,4,4,3,3,3,2,2,2,1,1,2,3,4,3,4,3,4,3,2,2,1,1,2,3,3,3,2,1,2,3,2,1,2,3)
+
+# Several ways to do the same thing:
+my_vector[my_vector==2]
+my_vector[my_vector != 1 & my_vector != 3 & my_vector != 4]
+my_vector[my_vector > 1 & my_vector < 3]
+
+
+
+
+
+
+
+
+
+
+
 
 
 

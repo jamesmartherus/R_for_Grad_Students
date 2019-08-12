@@ -20,9 +20,7 @@
 # Try to create a new dataset called venemous_reptiles that includes only 
 # animals with the type "reptile" and where venomous is equal to 1. 
 
-
 # Then drop all the variables except the animal's name, type, and the venomous variable.
 
 
 # Without peeking, what is the second animal in the list?
-

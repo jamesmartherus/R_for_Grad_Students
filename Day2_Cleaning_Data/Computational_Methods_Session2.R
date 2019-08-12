@@ -1,15 +1,63 @@
 ######################
-# Computational Methods Session 3
-# Tidying and Plotting Data
+# Computational Methods Session 2
+# Dataframes
 ######################
 
-# Last time we talked about vectors and dataframes. Today we'll spend some time on the two tasks
-# that will eventually take up most of your codig time - cleaning your data, and visualizing it.
 
-# The material we cover today is the most complicated we will cover in computing camp. You won't
-# understand everything, and you'll probably forget a lot of this, but learning to code is all about
-# repetition. Consider this your first exposure to some really important information, but don't be
-# discouraged if it doesn't make sense. 
+# Now we're ready to look at some real data! When you put a bunch of vectors together, you get a matrix
+# or a dataframe. Think of a dataframe like an excel spreadsheet. In most datasets, we want the rows
+# to represent individual observations (people, states, etc.) and the columns to represent traits about
+# those observations. Let's make one now.
+name <- c("al", "bea", "carol")
+age <- c(6, 7, 4)
+hair <- c("brown", "green", "blond")
+
+children <- data.frame(name, age, hair)
+children
+
+# Here the rows of the data.frame are individual children, identified by the name column.
+# The columns give some sort of information about each child including their age and hair color.
+
+# Now let's load up some "real" data and take a look at it. The first thing we need to do is tell R
+# where to look for the data. If the data is on your computer, your first step is to set the
+# working directory. If you aren't familiar with directories, they are just the system your computer
+# uses to organize files. 
+
+# On Mac OS, you can look at your directories using the Finder application.
+# On Windows, you'll look for something like "Windows Explorer." 
+
+# Once you find the data, you can find the path by right clicking on the folder and clicking either
+# "Get Info" on Mac or "Properties" (I think) on Windows. Type that path into the setwd() function.
+# Here's mine:
+library(tidyverse)
+setwd("/Users/jamesmartherus/Dropbox/Research/R_for_Grad_Students/Data/")
+animals <- read_csv("animals.csv")
+
+# Now we can check out the data in spreadsheet form by using the View() command:
+View(animals)
+
+# We can also look at the first few rows with the head() function or the last few with the tail() function.
+head(animals)
+
+# We can also look at the number of columns or rows in the dataset with the nrow() and ncol() functions.
+ncol(animals)
+
+# In vectors, when we wanted to refer to a specific piece of the vector, we had to use its numeric
+# position. In dataframes, we can refer to pieces of the dataframe using the names of the columns.
+# We do this with the `$` operator. The code: `animals$hair` refers to the column called "hair" in the
+# dataframe "animals."
+head(animals$eggs)
+
+# Complete Exercise 1: Basic Manipulations.
+
+#####################
+# Cleaning Data
+#####################
+
+# The material we cover today gets a little complicated. You won't understand everything,
+# and you'll probably forget a lot of this, but learning to code is all about repetition.
+# Consider this your first exposure to some really important information, but don't be
+# discouraged if it doesn't make perfect sense. 
 
 
 # Intro to the Tidyverse
@@ -19,16 +67,8 @@
 # We'll learn about a few of these functions today, but there are many more.
 # The handout I passed around is great for quickly reminding you some of these functions do.
 
-
-# First, let's upload some data into R to review from yesterday, and so we can see
-# the Tidyverse in action. 
-setwd("/users/jamesmartherus/Dropbox/Research/R_for_Grad_Students/Data/")
 library(foreign) # the foreign package allows us to import data of many different types.
 inequality_data <- read.dta("inequality.dta")
-
-head(inequality_data)
-
-class(inequality_data$state)
 
 
 
@@ -62,7 +102,6 @@ filter(inequality_data, state=="Tennessee")
 
 # Do Exercise 1: Subsetting
 
-
 # Next let's learn about dropping variables. There are a number of reasons we might want to do this.
 # Smaller datasets are easier to look at, and can be analyzed much more quickly. Keeping only the 
 # variables you're interested in is often a good idea. The select function makes this simple.
@@ -78,12 +117,6 @@ select(inequality_data, -c(atkin05, rmeandev, theil))
 
 # Do Exercise 2: Dropping Variables
 
-
-#############################################################
-# This next section is a really cool feature of the tidyverse, but it tends to confuse people.
-# If you feel like you're barely following along at this point, just skip this section. 
-# It is optional. 
-#############################################################
 
 # In Exercise 2, I asked you to use both the filter() function and the select() function.
 # You can actually use multiple tidyverse functions at once using something called
@@ -102,9 +135,6 @@ venomous_reptiles <- animals %>%
 
 # Lots of people get confused by this, so if it makes no sense to you, pretend you didn't hear
 # this and don't use it for now. All these functions will work perfectly fine without the pipe.
-
-#################################
-#################################
 
 
 # Next is the group_by() function. This one is a little tricky to explain, since you can't immediately
@@ -127,7 +157,6 @@ mean_gini <- inequality_data %>%
 
 # Do Exercise 3: Summarize
 
-
 # Finally, the mutate() function helps us create new variables. 
 # Perhaps we want a new variable that multiples the gini coefficient by 100 for some reason.
 # The second argument in the mutate function lets us specify the name of the new variable, and then
@@ -135,32 +164,10 @@ mean_gini <- inequality_data %>%
 mutate(inequality_data, gini100 = gini*100)
 
 
-# That's all I have for today. Next time we'll focus mostly on LaTeX, but we'll also learn how
-# to create loops in R. Loops can be challenging if you don't have prior programming experience,
-# but they can save you a TON of coding time once you get the hang of them.
-# Also your Stats 1 professor told me you'll need them in her class... 
+# Do Exercise 5: Making New Variables
 
 
 
-
-
-
-# Next is the mutate function. This one can be a little tricky, but its job is to create new variables.
-# For example, lets say
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# That's all for today! Next, we'll learn how to visualize our data with ggplot,
+# how to find help when you get stuck, and we'll start learning LaTeX.
 

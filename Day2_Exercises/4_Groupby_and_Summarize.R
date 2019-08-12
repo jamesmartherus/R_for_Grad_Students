@@ -18,13 +18,19 @@
 # Problem 1
 # OK, your turn! Load in the animals.csv file and try to get the LARGEST number of legs for each type
 # of animal. Hint: you can use max() instead of mean() inside the summarize() function. 
+most_legs <- group_by(animals, type)
+most_legs <- summarize(most_legs, max(legs))
 
 # Problem 2
 # Now find the number of each animals in each type. Hint: use n() instead of mean()
-
+num_type <- group_by(animals, type)
+num_type <- summarize(num_type, n())
 
 
 # Challenge: If you didn't already, try doing problems 1 and 2 using the pipe operator!
+animals_summarized <- animals %>%
+  group_by(type) %>%
+  summarize(max(legs), n())
 
 
 

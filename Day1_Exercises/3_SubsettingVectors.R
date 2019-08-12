@@ -21,6 +21,8 @@
 
    # Now can you figure out how to get the first AND third of your favorite numbers
    # in one query?
+my_vector[c(1,3)]
+my_vector[1:3]
 
 # Exercise 2: Subsetting Vectors with Booleans
    # Now suppose you only want the big values of `my_favorite_numbers`.

@@ -16,4 +16,5 @@
 
    # OK, now get just the rows that are mammals AND have tails. 
 
-   # how many animals fit these criteria?
+   # how many animals fit these criteria? 
+   #    HINT: remember the nrow() function?
