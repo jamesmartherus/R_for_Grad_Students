@@ -15,4 +15,22 @@
 # 3. Use the handout to try to find the right geom(). I can help you if you can't find one.
 
 # 4. Use the help file for the geom you chose and try to make your plot!
-# Remember if you want to store your plot, you have to save it as a new object!
+# Remember if you want to store your plot, you have to save it as a new object.
+
+ggplot(inequality, aes(x=year, y=gini, color=top10)) +
+  geom_point() +
+  geom_smooth(method="loess", size=1.5) +
+  xlab("Year") +
+  ylab("Gini Coefficient") +
+  ggtitle("Gini Coefficients Over Time") +
+  theme_bw() +
+  theme(text = element_text(size=18),
+        panel.border = element_blank(),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        axis.line = element_line(colour = "black"),
+        legend.position="bottom",
+        plot.title = element_text(hjust = 0.5))
+
+ggplot(inequality, aes(x=gini, y=state)) 
+ 

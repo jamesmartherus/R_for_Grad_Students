@@ -29,7 +29,7 @@
 
 # Next, help files show you how the function is used. In this case, the help file is actually 
 # describing a number of related functions (rnorm, dnorm, pnorm, and qnorm). Look at the 
-# usage for rnorm. This function uses three arguments - n, mean, and sd. You'll notive that
+# usage for rnorm. This function uses three arguments - n, mean, and sd. You'll notice that
 # the mean and se arguments are assigned values here. These are the defaults. If you don't
 # specify a mean or sd, rnorm will assume you want a mean of 0, and a standard deviation of 1.
 
@@ -38,6 +38,7 @@
 # and it gives us random numbers from the normal distribution
 random_nums <- rnorm(1000)
 
+# Preview of ggplot for later!
 library(ggplot2)
 qplot(random_nums)
 
@@ -93,12 +94,7 @@ qplot(random_nums)
 # Both of these books are also available for free online!
 
 
-
-
-
-
-
-
+# Do Exercise 1: Getting Help
 
 
 
@@ -131,18 +127,6 @@ qplot(inequality_data$year, inequality_data$gini)
 # The main workhorse function in ggplot is just called ggplot. Look up the help file for the 
 # ggplot function, and see if you can make sense of how to use it. Hint: there are examples 
 # at the bottom of the help file.
-
-###########################
-# An aside about help files
-###########################
-# Help files can be really helpful, especially when you start to get used to the way people
-# about different things in R. For example, the stuff you put into functions are called
-# arguments. The help file will tell you what the arguments for each funtion are called. 
-# Most functions have some arguments that are REQUIRED and others that you use only if you
-# need them. This won't make much sense to you right now, but the "usage" section of the help
-# file shows you the "defaults" for each argument. The function will use these defaults unless
-# you explicitly set them.  
-###########################
 
 
 # Essentially, ggplot takes a dataframe as its first argument, and then you use the aes()

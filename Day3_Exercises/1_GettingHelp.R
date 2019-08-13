@@ -19,11 +19,20 @@
 # Hint: Try Google and Stack Overflow
 
 # 2. How does this function work? 
-# Hint: Use the help file. Don't forget to install and load and packages you need first.
+# Hint: Use the help file. Don't forget to install and load any packages you need first.
 
 # 3. What is an id variable in the context of reshaping data?
 
-# Now, try to reshape the inequality data. Remember, you're going from long to wide.
+# Now, create a new dataframe called `inequality_wide` where each row is one state
+# and each year has its own set of columns.
 
 # You'll probably get an error the first time you try this.
 # Can you figure out what the error means? 
+
+library(foreign)
+setwd() # put your directory here
+inequality <- read.dta("inequality.dta")
+
+inequality_wide <- reshape(inequality, idvar="state",timevar="year",direction="wide")
+
+

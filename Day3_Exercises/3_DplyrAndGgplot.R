@@ -14,13 +14,29 @@
 #     try here: https://dplyr.tidyverse.org/
 # Bonus points if you do it all at once using the pipe!
 
+inequality_new <- inequality %>%
+  select(c(state, year, gini, top10)) %>%
+  group_by(state) %>%
+  summarize(mean_gini=mean(gini, na.rm=TRUE)) %>%
+  arrange(desc(mean_gini))
+
 
 # Part B
 # Now decide how to plot this data most clearly. Draw it out on paper!
+  
 
 
 # Part C
 # Create your plot using the ggplot function
+ggplot(inequality_new, aes(y=mean_gini,x=reorder(state, mean_gini), mean_gini)) +
+  geom_col() +
+  coord_flip() +
+  ylab("Mean Annual Gini Coefficient") +
+  xlab("State") +
+  ggtitle("Average Annual Gini Coefficient For Each State Between 1916 and 2012") +
+  theme_bw()
+
+
 
 
 # Part D
