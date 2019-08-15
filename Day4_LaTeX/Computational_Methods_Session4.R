@@ -16,7 +16,8 @@ animal_model <- lm(predator ~ hair + feathers + eggs + milk + airborne, data=ani
 
 # next I just put the model object (animal_model) into the `stargazer()` function, and I 
 # some code for a nice table! Just copy and paste this code into your .tex document.
-stargazer(animal_model)
+stargazer(animal_model,
+          type="text")
 
 # You can also control lots of different things in your table like the dependent variable labels,
 # covariate labels, etc. If you want to be able to read the table in R, use `type="text"`
